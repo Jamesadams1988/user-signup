@@ -4,9 +4,9 @@
             <h2>Sign Up</h2>
         </head>
         <body>
-            <form method="POST">
+            <form action="/welcome" method="POST">
                 <label for="user">Username:</label>
-                <input name="user" type="text" />
+                <input name="user" type="text" value ="username" />
                 <br>
                 <label for="pass">Password:</label>
                 <input name="pass" type="text" />
@@ -19,5 +19,8 @@
                 <br>
                 <input type="submit" value="Submit" />
             </form>
+            {% if error %}
+            <p class='error'>{{ error }}</p>
+            {% endif %}
         </body>
     </html>
